@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Button2 extends StatelessWidget {
   var action;
 
@@ -7,12 +8,17 @@ class Button2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-        width:  MediaQuery.of(context).size.width/6,
-        child: FlatButton(
-          hoverColor: Colors.grey,
-
-          child: Row(children: [Text(action.toString())]),
-        ));
+      width: MediaQuery.of(context).size.width / 6,
+      child: FlatButton(
+        hoverColor: Colors.grey,
+        child: Row(
+          children: [
+            Text(
+              action.toString(),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

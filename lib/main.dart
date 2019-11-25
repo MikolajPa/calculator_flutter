@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:probadwa/button1.dart';
-import'package:probadwa/keyboard.dart';
+import 'package:probadwa/keyboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -41,14 +41,14 @@ class Page2 extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(teksik),
-              Button1(
-                kliknij: () => Navigator.pop(context),
-              )
-            ],
-          )),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(teksik),
+          Button1(
+            kliknij: () => Navigator.pop(context),
+          )
+        ],
+      )),
     );
   }
 }
