@@ -70,6 +70,7 @@ class _KeyboardState extends State<Keyboard> {
         Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             child: Row(
+
               children: <Widget>[
                 Button2(
                   action: "+",
