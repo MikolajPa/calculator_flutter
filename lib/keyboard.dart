@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:probadwa/button1.dart';
 import 'package:probadwa/button2.dart';
 
-class Keyboard extends StatelessWidget {
+class Keyboard extends StatefulWidget {
   const Keyboard({Key key}) : super(key: key);
+
+  @override
+  _KeyboardState createState() => _KeyboardState();
+}
+
+class _KeyboardState extends State<Keyboard> {
+  String digital = "";
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +18,9 @@ class Keyboard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
+        Text(digital),
         Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
+            padding: EdgeInsets.only(left:45, right: 45, top: 100),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -28,7 +36,7 @@ class Keyboard extends StatelessWidget {
               ],
             )),
         Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
+            padding: EdgeInsets.only(left: 45, right: 45),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -44,7 +52,7 @@ class Keyboard extends StatelessWidget {
               ],
             )),
         Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
+            padding: EdgeInsets.only(left: 45, right: 45),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -69,8 +77,10 @@ class Keyboard extends StatelessWidget {
                 Button2(
                   action: "-",
                 ),
-                Button2(
-                  action: "*",
+                Expanded(
+                  child: Button2(
+                    action: "*",
+                  ),
                 ),
                 Button2(
                   action: "/",
