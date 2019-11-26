@@ -20,7 +20,7 @@ class _KeyboardState extends State<Keyboard> {
       children: <Widget>[
         Text(digital),
         Container(
-            padding: EdgeInsets.only(left:45, right: 45, top: 100),
+            padding: EdgeInsets.only(left: 45, right: 45, top: 100),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -70,7 +70,6 @@ class _KeyboardState extends State<Keyboard> {
         Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             child: Row(
-
               children: <Widget>[
                 Button2(
                   action: "+",
@@ -78,10 +77,8 @@ class _KeyboardState extends State<Keyboard> {
                 Button2(
                   action: "-",
                 ),
-                Expanded(
-                  child: Button2(
-                    action: "*",
-                  ),
+                Button2(
+                  action: "*",
                 ),
                 Button2(
                   action: "/",
