@@ -7,12 +7,12 @@ class Button2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SizedBox.fromSize(
-          child: FlatButton(
-            child: Row(children: [Text(action)]),
+    return SizedBox(
+          child: FloatingActionButton(
+            backgroundColor: Colors.orange,
+            child: Row(children: [Text(action, style: TextStyle(color:Colors.white))]),
             onPressed: () {},
-          )),
+          ),
     );
   }
 }

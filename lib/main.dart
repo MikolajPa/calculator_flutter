@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(),
-      home: Scaffold(body: Center(child: Dupa())),
+      home: Scaffold(backgroundColor: Colors.black,body: Center(child: Dupa())),
     );
   }
 }
@@ -22,33 +22,8 @@ class Dupa extends StatefulWidget {
 }
 
 class _DupaState extends State<Dupa> {
-  String dupcia = "";
-  TextEditingController teksicikiController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return const Keyboard();
-  }
-}
-
-class Page2 extends StatelessWidget {
-  final String teksik;
-
-  const Page2({Key key, this.teksik}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(teksik),
-          Button1(
-            kliknij: () => Navigator.pop(context),
-          )
-        ],
-      )),
-    );
   }
 }

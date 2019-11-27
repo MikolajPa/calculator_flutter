@@ -8,10 +8,14 @@ class Button1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+
       child: SizedBox.fromSize(
           child: FlatButton(
-        child: Row(children: [Text(value.toInt().toString())]),
+            shape: new CircleBorder(),
+            color: Colors.grey,
+            padding: const EdgeInsets.all(15.0),
+        child: Row(children: [Text(value.toInt().toString(),style:TextStyle(color: Colors.white) )]),
         onPressed: () {},
       )),
     );
